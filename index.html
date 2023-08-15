@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+
+      <div class="display-container">
+        <input
+          readonly
+          placeholder="Password"
+          class="display"
+          data-passwordDisplay
+        />
+
+        <button class="copyBtn" data-copy>
+          <span class="tooltip" data-copyMsg></span>
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="copy"
+            width="23"
+            height="23"
+          />
+        </button>
+      </div>
+
+      <div class="input-container">
+        <!--password length section-->
+        <div class="length-container">
+          <p>Password Length</p>
+          <p data-lengthNumber>0</p>
+        </div>
+
+        <!--slider-->
+        <input
+          type="range"
+          min="1"
+          max="20"
+          class="slider"
+          step="1"
+          data-lengthSlider
+        />
+
+        <!-- checkboxes-->
+        <div class="check">
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Includes Uppercase letters</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Includes Lowercase letters</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Includes Numbers </label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Includes Symbols </label>
+        </div>
+
+        <!-- strength section-->
+        <div class="strength-container">
+          <p>Strength</p>
+          <div class="indicator" data-indicator></div>
+        </div>
+
+        <!-- generate password-->
+        <button class="generateButton">Generate Password</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
